@@ -9,6 +9,8 @@ import {
   Navigate,
 } from "react-router-dom";
 
+import { Analytics } from '@vercel/analytics/react';
+
 import Auth from "./components/Auth";
 import Authlog from "./components/Authlog";
 import EmailVerify from "./components/Email/EmailVerify";
@@ -85,6 +87,7 @@ const App = () => {
         />
       </Routes>
 
+      <Analytics />
       <Footer />
     </BrowserRouter>
   );
