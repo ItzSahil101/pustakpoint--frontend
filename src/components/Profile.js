@@ -16,6 +16,7 @@ import axios from "axios";
 import Feedback from "./Feedback";
 import Loader from "./Loader";
 import { FaBook } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Main(props) {
   const user = props.user;
@@ -28,6 +29,8 @@ export default function Main(props) {
   const totalAmount = points * pricePerPoint;
   const [visibleCount, setVisibleCount] = useState(1);
   const [allusers, setAllUsers] = useState([]);
+
+  const navigate = useNavigate();
 
   const sortedUsers = Array.isArray(allusers)
     ? [...allusers].sort((a, b) => b.books.length - a.books.length)
