@@ -87,28 +87,12 @@ export default function Main(props) {
     }
   };
 
-  const handlePurchase = async () => {
+   const handlePurchase = async () => {
     if (points < 2) {
       alert("Minimum 2 points required");
       return;
     }
-
-    setLoading(true);
-    try {
-      const res = await axios.post(
-        "https://pustak-point-backend.vercel.app/api/esewa/initiate-payment",
-        {
-          amount: points,
-          userId: user._id,
-        }
-      );
-      window.location.href = res.data.paymentUrl;
-    } catch (error) {
-      console.error("Payment initiation failed", error);
-      alert("Something went wrong with the payment process.");
-    } finally {
-      setLoading(false);
-    }
+    navigate("/payment");
   };
 
   return (
