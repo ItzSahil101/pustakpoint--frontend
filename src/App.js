@@ -22,6 +22,7 @@ import ResetPass from "./components/ResetPassword";
 import Loader from "./components/Loader";
 import Footer from "./components/Footer";
 import AdminDashboard from "./pages/AdminPaneel";
+import Payment from "./components/Payment";
 import { use } from "react";
 
 const App = () => {
@@ -61,6 +62,7 @@ const App = () => {
         <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
         <Route path="/reset-password/:token" element={<ResetPass />} />
         <Route path="/:category" element={<CategoryPage />} />
+    <Route path="/payment" element={<Payment />} />
         <Route
           path="/profile"
           element={
