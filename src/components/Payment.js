@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import esewaQR from '../images/eSewa_My_QR_9842174208_1748493683843_2025-05-29_10_26_24.jpg';
 
 const Payment = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -36,7 +35,11 @@ const Payment = () => {
       <div style={dynamicStyles.contentWrapper}>
         {/* Left Side */}
         <div style={dynamicStyles.leftSide}>
-          <img src={esewaQR} alt="eSewa QR" style={styles.qrImage} />
+          <img
+            src="https://i.imgur.com/RzJZKeU.png"
+            alt="eSewa QR"
+            style={styles.qrImage}
+          />
 
           <div style={styles.phoneBox}>
             <label style={styles.label}>eSewa Number:</label>
